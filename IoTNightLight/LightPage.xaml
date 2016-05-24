@@ -7,46 +7,58 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Template10.Controls"
     mc:Ignorable="d">
+ 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Black">
         <TextBlock Text="Light" RelativePanel.AlignHorizontalCenterWithPanel="True" 
                    RelativePanel.AlignTopWithPanel="true"
-                   HorizontalAlignment="Center"
-                   FontSize="34" />
-        <RelativePanel Margin="10,10,10,10">
-            <controls:RingSegment x:Name="Ring" EndAngle="90" InnerRadius="75"
+                   HorizontalAlignment="Left"
+                   FontSize="14.667" Foreground="Lime" Margin="40,0,0,0" />
+        <RelativePanel Margin="10,-53,10,73" RenderTransformOrigin="0.492,0.359">
+            <controls:RingSegment x:Name="Ring" EndAngle="259" InnerRadius="140" Canvas.ZIndex="99"
                               Radius="150" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                              RelativePanel.AlignVerticalCenterWithPanel="True" StartAngle="-90">
+                              RelativePanel.AlignVerticalCenterWithPanel="True" StartAngle="-90" Margin="-6,-48.457,6,48.454" UseLayoutRounding="False">
                 <controls:RingSegment.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Offset="0" Color="Lime" />
-                        <GradientStop Offset="1" Color="Red" />
-                        <GradientStop Offset="0.505" Color="#FFFFFB00" />
-                        <GradientStop Offset="0.291" Color="#FFC5FF00" />
-                        <GradientStop Offset="0.727" Color="#FFFFDC00" />
+                        <GradientStop Offset="0" Color="Black" />
+                        <GradientStop Offset="0.327" Color="Lime" />
+                        <GradientStop Offset="0.131" Color="#FF2E9D0B" />
+
                     </LinearGradientBrush>
                 </controls:RingSegment.Fill>
             </controls:RingSegment>
 
-            <Path x:Name="path" Width="31" Height="150"
-              Data="F1 M 295.5,308.25L 281.5,-17.75L 265,309.75" Fill="#FFFFFFFF"
+            <Path x:Name="path" Width="31" Height="150" Canvas.ZIndex="99"
+              Data="F1 M 295.5,308.25L 281.5,-17.75L 265,309.75" Fill="Lime"
               RelativePanel.AlignHorizontalCenterWith="Ring" RelativePanel.AlignTopWith="Ring"
               RenderTransformOrigin="0.5,1" Stretch="Uniform" Stroke="#FF000000"
-              StrokeLineJoin="Round">
+              StrokeLineJoin="Round" Margin="-1.146,-44.613,1.143,44.61" UseLayoutRounding="False">
                 <Path.RenderTransform>
                     <CompositeTransform x:Name="ArrowTransform" Rotation="-40" />
                 </Path.RenderTransform>
             </Path>
 
-            <Ellipse Width="25" Height="25" Fill="Orange"
-                 RelativePanel.AlignHorizontalCenterWith="Ring"
-                 RelativePanel.AlignVerticalCenterWith="Ring" />
 
-            <StackPanel Orientation="Horizontal" Margin="0,75,0,0"
+            <Ellipse Width="25" Height="25" Fill="Lime"
+                 RelativePanel.AlignHorizontalCenterWith="Ring"
+                 RelativePanel.AlignVerticalCenterWith="Ring" Margin="-6.667,-89.667,6.667,89.667" VerticalAlignment="Bottom" />
+
+
+            <Rectangle Margin="0,84,-340,-448">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Assets/ghostbusters-screen.png" />
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+            <StackPanel Orientation="Horizontal" Margin="4.667,343,-4.333,-43"
             RelativePanel.AlignHorizontalCenterWith="Ring"
                  RelativePanel.AlignVerticalCenterWith="Ring">
+
+
+
                 <TextBox x:Name="MyTextBox" />
-                <Button Content="Go" Click="{x:Bind Go}" />
+                <Button Content="Go" Click="{x:Bind Go}" VerticalAlignment="Bottom" />
             </StackPanel>
             <Grid RelativePanel.AlignBottomWithPanel="true"  RelativePanel.AlignHorizontalCenterWithPanel="True" Padding="0,0,0,10">
                 <Grid.ColumnDefinitions>
