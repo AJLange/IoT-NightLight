@@ -7,16 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Black" Margin="0,714.227,569.073,-1268.454" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Grid.RenderTransform>
+            <CompositeTransform Rotation="-90"/>
+        </Grid.RenderTransform>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="StatusText" Text="Waiting for initialization" Margin="10,30,10,10" TextAlignment="Center" FontSize="26" />
-            <TextBlock x:Name="textPlaceHolder" Text="N/A" Margin="10,50,10,10" TextAlignment="Center" FontSize="26" />
+            <TextBlock x:Name="StatusText" Text="Waiting for initialization" Margin="10,30,10,10" TextAlignment="Center" FontSize="26" Foreground="Lime" />
+            <TextBlock x:Name="textPlaceHolder" Text="N/A" Margin="10,50,10,10" TextAlignment="Center" FontSize="26" Foreground="Lime" />
             <Rectangle x:Name="IndicatorBar" Height="20" Fill="LightGray" Width="300"/>
             <ScrollViewer>
-                <TextBlock x:Name="MessageLog" Text="Message Log" Margin="10,50,10,10" TextAlignment="Center" Height="150" FontSize="16" />
+                <TextBlock x:Name="MessageLog" Text="Message Log" Margin="10,50,10,10" TextAlignment="Center" Height="150" FontSize="16" Foreground="Lime" />
             </ScrollViewer>
             <ScrollViewer>
-                <TextBlock x:Name="MessagesIn" Text="Input Log" Margin="10,10,10,10" TextAlignment="Center" Height="150" FontSize="16" />
+                <TextBlock x:Name="MessagesIn" Text="Input Log" Margin="10,10,10,10" TextAlignment="Center" Height="150" FontSize="16" Foreground="Lime" />
             </ScrollViewer>
         </StackPanel>
 
@@ -27,10 +30,10 @@
                 <ColumnDefinition Width="10*"></ColumnDefinition>
                 <ColumnDefinition Width="10*"></ColumnDefinition> 
             </Grid.ColumnDefinitions>
-            <Button Content="Temp"      Click="navHandler_OnClick" Height="49" Grid.Column="0"  Width="78" />
-            <Button Content="Light"     Click="navHandler_OnClick" Height="49" Grid.Column="1"  Width="78" />
-            <Button Content="Moisture"  Click="navHandler_OnClick" Height="49" Grid.Column="2"  Width="78" />
-            <Button Content="Log"       Click="navHandler_OnClick" Height="49" Grid.Column="3"  Width="78" />
+            <Button Content="Temp"      Click="navHandler_OnClick" Height="49" Grid.Column="0"  Width="78" Background="Lime" />
+            <Button Content="Light"     Click="navHandler_OnClick" Height="49" Grid.Column="1"  Width="78" Background="Lime" />
+            <Button Content="Moisture"  Click="navHandler_OnClick" Height="49" Grid.Column="2"  Width="78" Background="Lime" />
+            <Button Content="Log"       Click="navHandler_OnClick" Height="49" Grid.Column="3"  Width="78" Background="Lime" />
         </Grid>
 
     </Grid>

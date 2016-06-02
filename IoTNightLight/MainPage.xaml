@@ -8,70 +8,93 @@
     xmlns:controls="using:Template10.Controls"
     mc:Ignorable="d">
 
-<<<<<<< HEAD
     <Grid Background="Black">
-        <TextBlock Text="Main" RelativePanel.AlignHorizontalCenterWithPanel="True" 
-=======
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="NameBlock" Text="Temperature" RelativePanel.AlignHorizontalCenterWithPanel="True" 
->>>>>>> refs/remotes/DaveVoyles/master
+
+        <Border BorderBrush="White">
+            <TextBlock x:Name="NameBlock" Text="Temperature" RelativePanel.AlignHorizontalCenterWithPanel="True" 
                    RelativePanel.AlignTopWithPanel="true"
-                   HorizontalAlignment="Left"
-                   FontSize="14.667" Foreground="Lime" Margin="40,0,0,0" />
-        <RelativePanel Margin="10,-53,10,73" RenderTransformOrigin="0.492,0.359">
-            <controls:RingSegment x:Name="Ring" EndAngle="259" InnerRadius="140" Canvas.ZIndex="99"
+                   HorizontalAlignment="Center" 
+                   FontSize="34"
+                     Foreground="Lime" Margin="294.778,604.811,796.221,-604.811" UseLayoutRounding="False" d:LayoutRounding="Auto">
+
+                <TextBlock.RenderTransform>
+                    <CompositeTransform Rotation="-90"/>
+                </TextBlock.RenderTransform>
+
+            </TextBlock>
+        </Border>
+
+        <RelativePanel Margin="10,10,10,10" >
+
+            <controls:RingSegment x:Name="Ring" EndAngle="250" InnerRadius="145"
                               Radius="150" RelativePanel.AlignHorizontalCenterWithPanel="True"
-                              RelativePanel.AlignVerticalCenterWithPanel="True" StartAngle="-90" Margin="-6,-48.457,6,48.454" UseLayoutRounding="False">
+                              Canvas.ZIndex="49"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True" StartAngle="-90" Height="648.502" UseLayoutRounding="False" VerticalAlignment="Top" Margin="-151.333,-322.001,-315.834,-326.501" RenderTransformOrigin="0.5,0.5">
+                <controls:RingSegment.RenderTransform>
+                    <CompositeTransform Rotation="-90"/>
+                </controls:RingSegment.RenderTransform>
                 <controls:RingSegment.Fill>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Offset="0" Color="Black" />
-                        <GradientStop Offset="0.327" Color="Lime" />
-                        <GradientStop Offset="0.131" Color="#FF2E9D0B" />
-
+                        <GradientStop Offset="1" Color="#FF3AFF00" />
+                        <GradientStop Color="#FF2BB404" Offset="0.213"/>
                     </LinearGradientBrush>
                 </controls:RingSegment.Fill>
             </controls:RingSegment>
 
-            <Path x:Name="path" Width="31" Height="150" Canvas.ZIndex="99"
-              Data="F1 M 295.5,308.25L 281.5,-17.75L 265,309.75" Fill="Lime"
+            <Path x:Name="path" Width="31" Height="150"
+              Data="F1 M 295.5,308.25L 281.5,-17.75L 265,309.75" Fill="#FFFFFFFF"
               RelativePanel.AlignHorizontalCenterWith="Ring" RelativePanel.AlignTopWith="Ring"
               RenderTransformOrigin="0.5,1" Stretch="Uniform" Stroke="#FF000000"
-              StrokeLineJoin="Round" Margin="-1.146,-44.613,1.143,44.61" UseLayoutRounding="False">
+              StrokeLineJoin="Round" Canvas.ZIndex="50" Margin="-20.334,-164,20.333,164" UseLayoutRounding="False">
                 <Path.RenderTransform>
-                    <CompositeTransform x:Name="ArrowTransform" Rotation="-40" />
+                    <CompositeTransform x:Name="ArrowTransform" Rotation="-40"  />
                 </Path.RenderTransform>
             </Path>
 
-
             <Ellipse Width="25" Height="25" Fill="Lime"
                  RelativePanel.AlignHorizontalCenterWith="Ring"
-                 RelativePanel.AlignVerticalCenterWith="Ring" Margin="-6.667,-89.667,6.667,89.667" VerticalAlignment="Bottom" />
+                 RelativePanel.AlignVerticalCenterWith="Ring" />
 
+            <StackPanel   
+                RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" RenderTransformOrigin="0.5,0.5">
+                <Rectangle RenderTransformOrigin="0.5,0.5" Height="500" Margin="-250,-250,-250,-250" Canvas.ZIndex="-50" UseLayoutRounding="False" d:LayoutRounding="Auto" >
 
-            <Rectangle Margin="0,84,-340,-448">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="Assets/ghostbusters-screen.png" />
-                </Rectangle.Fill>
-            </Rectangle>
+                    <Rectangle.RenderTransform>
+                        <CompositeTransform Rotation="-90"/>
+                    </Rectangle.RenderTransform>
 
-
-            <StackPanel Orientation="Horizontal" Margin="4.667,343,-4.333,-43"
-            RelativePanel.AlignHorizontalCenterWith="Ring"
-                 RelativePanel.AlignVerticalCenterWith="Ring">
-                <TextBox x:Name="MyTextBox" />
-                <Button  x:Name="ValBtn" Content="Go" Click="{x:Bind Go}" />
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Assets/ghostbusters-screen.png" Stretch="Uniform" />
+                    </Rectangle.Fill>
+                </Rectangle>
             </StackPanel>
-            <Grid RelativePanel.AlignBottomWithPanel="true"  RelativePanel.AlignHorizontalCenterWithPanel="True" Padding="0,0,0,10">
+
+            <StackPanel Orientation="Horizontal" Margin="382.22,237.835,-383.14,112.165"
+            RelativePanel.AlignHorizontalCenterWith="Ring"
+                 RelativePanel.AlignVerticalCenterWith="Ring" UseLayoutRounding="False" d:LayoutRounding="Auto">
+
+                <StackPanel.RenderTransform>
+                    <CompositeTransform Rotation="-90"/>
+                </StackPanel.RenderTransform>
+                <TextBox x:Name="MyTextBox" />
+                <Button  x:Name="ValBtn" Content="Go" Click="{x:Bind Go}"  Background="Lime" />
+            </StackPanel>
+            <Grid RelativePanel.AlignBottomWithPanel="true"  RelativePanel.AlignHorizontalCenterWithPanel="True" Padding="0,0,0,10" Margin="547.629,-138.557,-547.629,138.557" UseLayoutRounding="False" d:LayoutRounding="Auto">
+
+                <Grid.RenderTransform>
+                    <CompositeTransform Rotation="-90"/>
+                </Grid.RenderTransform>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Content="Temp"      Click="navHandler_OnClick" Height="49" Grid.Column="0"  Width="78" />
-                <Button Content="Light"     Click="navHandler_OnClick" Height="49" Grid.Column="1"  Width="78" />
-                <Button Content="Moisture"  Click="navHandler_OnClick" Height="49" Grid.Column="2"  Width="78" />
-                <Button Content="Log"       Click="navHandler_OnClick" Height="49" Grid.Column="3"  Width="78" />
+                <Button Content="Temp"      Click="navHandler_OnClick" Height="49" Grid.Column="0"  Width="78"  Background="Lime" />
+                <Button Content="Light"     Click="navHandler_OnClick" Height="49" Grid.Column="1"  Width="78" Background="Lime" />
+                <Button Content="Moisture"  Click="navHandler_OnClick" Height="49" Grid.Column="2"  Width="78" Background="Lime" />
+                <Button Content="Log"       Click="navHandler_OnClick" Height="49" Grid.Column="3"  Width="78" Background="Lime" />
             </Grid>
         </RelativePanel>
 
