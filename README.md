@@ -2,6 +2,8 @@
 
 ### Author(s): Dave Voyles | [@DaveVoyles](http://www.twitter.com/DaveVoyles)
 ### URL: [www.DaveVoyles.com](http://www.DaveVoyles.com)
+### Amanda Lange | [@second_truth](http://www.twitter.com/second_truth)
+### URL: [www.secondtruth.com](http://www.secondtruth.com)
 
 Send messages from a Win10 console app to a Raspberry Pi, via Azure IoT Hub 
 ----------
@@ -56,4 +58,7 @@ parms:
 * "moisture"
 * "temp"
 * "light"
+
+### Graphical updates
+Updates to UI are designed to make this work best on a miniature screen for Raspberry Pi. Because of this, the UI will appear sideways on desktop devices!
 
